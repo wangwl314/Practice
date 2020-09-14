@@ -9,10 +9,6 @@ Vue.use(VueRouter)
       component: () => import('../views/Home')
     },
     {
-      path:'/prim',
-      component: () => import('../views/prim/prim')
-    },
-    {
       path:'/tech',
       component: () => import('../views/tech/tech')
     },
@@ -21,7 +17,7 @@ Vue.use(VueRouter)
       component: () => import('../views/other/other')
     },
     {
-      path: 'about',
+      path: '/about',
       component: () => import('../views/about/about')
     }
 ]

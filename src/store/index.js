@@ -9,7 +9,8 @@ export default new Vuex.Store({
     books:{
       name:'bobites',
       price:99
-    }
+    },
+    num:800
   },
   mutations: {
     func1 (state){
@@ -18,6 +19,9 @@ export default new Vuex.Store({
       }else{
         state.movies.splice(-1,1)
       }
+    },
+    func2 (state,count){
+        state.num += count
     },
     func3 (state){
       if (!state.books.author){
@@ -28,9 +32,12 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    
+    update (context){
+      setTimeout(() => {
+        context.commit('func1')
+      },1000)
+    }
   },
   modules: {
-
   }
 })

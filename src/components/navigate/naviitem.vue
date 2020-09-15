@@ -27,6 +27,7 @@
   }
   .btnstyle:hover {
     color: tomato;
+    
   }
   .btnstyle:active {
     transform: translateY(2px);

@@ -10,7 +10,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .navibar {
     float: right;
     margin-top:10px;

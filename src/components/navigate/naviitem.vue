@@ -19,7 +19,7 @@
 </script>
 
 
-<style>
+<style scoped>
   .naviitem {
     float: right;
     margin-right: 15px;

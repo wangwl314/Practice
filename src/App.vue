@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <div>
+  <div  style="margin-top:30px;">
+  <div style="margin-right:7%">  
     <navibar>
-      <naviitem path='/about'>🐱‍🚀关于</naviitem>
-      <naviitem path='/other'>🎁其他</naviitem>
-      <naviitem path='/tech'>✨技术</naviitem>
-      <naviitem path='/'>🎶首页</naviitem>  
+      <naviitem path='/'>首页</naviitem>
+      <naviitem path='/tech'>技术</naviitem>
+      <naviitem path='/other'>其他</naviitem>
+      <naviitem path='/about'>关于</naviitem>  
     </navibar>
-    </div>
+  </div>  
 
     <div>
       <intro>
@@ -22,7 +22,6 @@
     
   </div>
 </template>
-
 <script>
 import navibar from './components/navigate/navibar'
 import naviitem from './components/navigate/naviitem'

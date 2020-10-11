@@ -14,10 +14,9 @@ export default {
   .intro {
     float: left;
     position: fixed;
-    padding-top: 9%;
+    margin-top: 11%;
     border-right:2px solid lightgray;
-    border-bottom: 2px solid lightgray;
-    width: 20%;
+    width: 23%;
     text-align: center;
   }
 </style>

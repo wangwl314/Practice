@@ -1,7 +1,7 @@
 <template>
-  <div class='naviitem'>
-    <button class='btnstyle' @click='btnclick'><slot></slot></button>
-  </div>
+  
+  <div class='btnstyle' @click='btnclick'><slot></slot></div>
+  
 </template>
 
 <script>
@@ -20,26 +20,22 @@
 
 
 <style scoped>
-  .naviitem {
-    float: right;
-    margin-right: 15px;
-    border-left: 2px solid lightgrey;
-  }
+  
   .btnstyle:hover {
     color: tomato;
-    
+    transform: translateY(-5px);
+    text-shadow: -2px 5px 0 gray;
   }
   .btnstyle:active {
     transform: translateY(2px);
   }
   .btnstyle {
+    display: inline-block;
     border: none;
-    background-color: #fff;
-    margin: auto;
-    font-size: 16px;
-    font-weight: bold;
-    padding:8px 5px;
-    text-align: center;
+    background-color: #ffffff;
+    margin-right: 13px;
+    font-size: 27px;
+    font-weight: 500; 
   }
   
 </style>

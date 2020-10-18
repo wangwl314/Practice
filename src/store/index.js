@@ -10,7 +10,10 @@ export default new Vuex.Store({
       name:'bobites',
       price:99
     },
-    num:800
+    num:800,
+    loginstat:false,
+    access:'',
+    refresh:'',
   },
   mutations: {
     func1 (state){
@@ -29,14 +32,20 @@ export default new Vuex.Store({
       }else{
         Vue.delete(state.books,'author')
       }
-    }
+    },
+    chg1 (state){state.loginstat = !state.loginstat},
+    chg2 (state, pl1){state.access = pl1},
+    chg3 (state, pl2){state.refresh = pl2},
   },
   actions: {
     update (context){
       setTimeout(() => {
         context.commit('func1')
       },1000)
-    }
+    },
+    chgstat (context){context.commit('chg1')},
+    gettoken (context, pl1){context.commit('chg2', pl1)},
+    updatetoken (context, pl2){context.commit('chg3', pl2)},
   },
   modules: {
   }

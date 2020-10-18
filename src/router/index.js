@@ -23,6 +23,10 @@ Vue.use(VueRouter)
     {
       path: '/about',
       component: () => import('../views/about/about')
+    },
+    {
+      path: '/login',
+      component: () => import('../views/login/login')
     }
 ]
 

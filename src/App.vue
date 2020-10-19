@@ -1,5 +1,7 @@
 <template>
 <div style="margin-top:30px;">
+
+  
   <router-link to = '' />
   <router-view />
 </div>

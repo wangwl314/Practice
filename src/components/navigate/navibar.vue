@@ -13,5 +13,6 @@
 <style scoped>
   .navibar {
     float: right;
+    margin-right: 3%;
   }
 </style>

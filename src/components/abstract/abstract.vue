@@ -13,16 +13,23 @@
 import axios from 'axios'
 export default {
   name: 'abstract',
+  beforeCreate (){
+    axios({
+      url: 'http://127.0.0.1:8000/api/article/',
+      method: 'get',
+    }).then(res => {
+      this.abs = res.data.results
+    })
+    },
   data (){
     return {
-      abs: this.$store.state.abstract,
+      abs: {},
     }
-  },
-    
+  } 
 }
 </script>
 
 <style scoped>
 .abstract {border: 1px solid gray; width: 53%; position: absolute;
-right: 8%;top: 13%;text-align: justify;line-height: 1.4;padding: 15px 30px;}
+right: 11%;top: 13%;text-align: justify;line-height: 1.4;padding: 15px 30px;}
 </style>

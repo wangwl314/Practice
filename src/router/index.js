@@ -1,16 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import home from '../views/Home'
+import unmove from '../views/unmove/unmove'
 
 Vue.use(VueRouter)
 
   const routes = [
     {
       path:'',
-      component: () => import('../views/Home')
+      redirect: '/home'
     },
     {
       path:'/home',
-      component: () => import('../views/Home')
+      component: home
+    },
+    {
+      path: '/um',
+      component: unmove
     },
     {
       path:'/tech',

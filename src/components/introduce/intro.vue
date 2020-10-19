@@ -13,10 +13,11 @@ export default {
 <style scoped>
   .intro {
     float: left;
-    position: fixed;
-    margin-top: 11%;
-    border-right:2px solid lightgray;
-    width: 23%;
+    margin-left: 4%;
+    margin-top: 7%;
+    border-right:2px solid gray;
+    width: 22%;
     text-align: center;
+    padding: 3% 2%;
   }
 </style>

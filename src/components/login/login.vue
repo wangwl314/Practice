@@ -1,12 +1,15 @@
 <template>
-<div class="login">
-  
-    <h1>登录</h1>
-    <div>账号：<input type="text" placeholder="请输入用户名" v-model="username" required></div>
-    <div>密码：<input type="password" placeholder="请输入密码" v-model="password" required></div>
-    <div><button @click="login">登录</button></div>
-  
-</div>
+  <div>
+    <div class="login"> 
+      <h1>登录</h1> 
+      
+      <div>账号:<input type="text" placeholder="请输入用户名" v-model="username" required></div>
+     
+      <div>密码:<input type="password" placeholder="请输入密码" v-model="password" required></div>
+      
+      <div><button @click="login">登录</button></div> 
+    </div>
+  </div>
 </template>
 
 <script>
@@ -48,6 +51,6 @@ export default {
 <style scoped>
 input {margin-bottom: 19px; height: 26px; border: 1px solid gray; border-radius: 4px;}
 /*input:focus {border: 1px solid pink; background-color: blanchedalmond; color: crimson;}*/
-.login {text-align: center; border-top: 1px solid black; border-bottom: 1px solid black;
-margin: auto; margin-top: 25%; width: 33%; padding: 20px 0;}
+.login {text-align: center;margin: auto; width: 33%;border: 1px solid;padding: 30px 0;
+  position: relative;top: 260px;}
 </style>

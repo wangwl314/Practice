@@ -37,6 +37,7 @@ export default new Vuex.Store({
     chg1 (state){state.loginstat = !state.loginstat},
     chg2 (state, pl1){state.access = pl1},
     chg3 (state, pl2){state.refresh = pl2},
+    chg4 (state, vl3){state.abstract = vl3}
   },
   actions: {
     update (context){
@@ -47,6 +48,7 @@ export default new Vuex.Store({
     chgstat (context){context.commit('chg1')},
     gettoken (context, pl1){context.commit('chg2', pl1)},
     updatetoken (context, pl2){context.commit('chg3', pl2)},
+    getabstract (context, vl3){context.commit('chg4',vl3)}
   },
   modules: {
   }

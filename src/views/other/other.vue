@@ -1,5 +1,5 @@
 <template>
-  <div class="text">
+  <div id="test">
     <h2>other page...</h2>
     <h2>{{$store.state.num}}</h2>
     <button @click="func1">+</button>
@@ -17,5 +17,5 @@ export default {
 </script>
 
 <style>
-.text {margin-top:9%;}
+#test {position: relative;top: 200px;}
 </style>

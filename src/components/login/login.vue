@@ -27,17 +27,18 @@ export default {
     login(){
       axios({
         method: 'post',
-        url: 'http://127.0.0.1:8000/gettoken/',
+        url: this.$store.state.base_url+'gettoken/',
         data: {
           username: this.username,
           password: this.password,
         },
       }).then(res => {
         if(res.status<400){
-          this.$store.dispatch('chgstat')
+          window.localStorage.setItem('token',res.data.access)
+          window.localStorage.setItem('refresh', res.data.refresh)
           this.$store.dispatch('gettoken',res.data.access)
           this.$store.dispatch('updatetoken',res.data.refresh)
-          this.$router.replace('/home')
+          this.$router.replace('/creation')
         }else{
           alert('access denyed')
         }

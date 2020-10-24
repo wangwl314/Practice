@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    base_url:'http://127.0.0.1:8000/api/',
     movies:['ironman','superman','spiderman'],
     books:{
       name:'bobites',

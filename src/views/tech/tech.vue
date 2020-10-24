@@ -3,7 +3,7 @@
     <h2>tech page...</h2>
     <p>{{$store.state.movies}}</p>
     <button @click='func1'>chg</button>
-    <button @click="func2">store</button>
+    <button @click="func2">test</button>
   </div>
 </template>
 

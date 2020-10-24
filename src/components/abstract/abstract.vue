@@ -37,7 +37,7 @@ export default {
   },
   created (){
     axios({
-      url: 'http://192.168.3.252:8888/api/article/',
+      url: this.$store.state.base_url+'article/',
       method: 'get',
     }).then(res => {
       this.abs = res.data.results

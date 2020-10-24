@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import abstract from '../components/abstract/abstract'
+  import abstract from '@/components/abstract/abstract'
   export default {
     name:'Home',
     components:{

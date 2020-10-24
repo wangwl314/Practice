@@ -20,7 +20,7 @@ export default {
   beforeMount (){
     let id = this.$route.query.id
     axios({
-      url: 'http://192.168.3.252:8888/api/article/'+id,
+      url: this.$store.state.base_url+'article/'+id,
       method: 'get',
     }).then(res => {
       this.dtl = res.data

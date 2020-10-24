@@ -1,19 +1,33 @@
 <template>
 <div id="app">
   <nav id='nav'>
-    <router-link to='/login' class="btnstyle" v-if="this.$store.state.loginstat">离开</router-link>
-    <router-link to = '/login' class="btnstyle" v-if="!this.$store.state.loginstat">记录</router-link>
-    <router-link to = '/other' class="btnstyle">其他</router-link>
-    <router-link to = '/teck' class="btnstyle">技术</router-link>
-    <router-link to = '/home' class="btnstyle">首页</router-link>  
+    <router-link to='/home' class="btnstyle" v-if="stat" @click="leave">离开</router-link>
+    <router-link to = '/login' class="btnstyle" v-if="!stat">记录</router-link>
+    <router-link to = '/creation' class="btnstyle">其他</router-link>
+    <router-link to = '/tech' class="btnstyle">技术</router-link>
+    <router-link to = '/home' class="btnstyle">首页</router-link>
+  </nav>  
     <router-view />
-  </nav>
 </div>
 </template>
 
 <script>
 export default {
-  
+  data (){
+    return {
+      stat: Boolean
+    }
+  },
+  mounted (){
+    if(this.$store.state.access){
+      this.stat = true
+    }else{this.stat = false}
+  },
+  methods: {
+    leave (){
+      this.stat = false
+    }
+  }
 }
 </script>
 
